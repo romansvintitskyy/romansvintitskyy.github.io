@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Roman Svintitskyy's Portfolio</title>
+    <link rel="stylesheet" href="css/design.css">
+    <!-- TextIcons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav role="navigation" class="nav container" aria-labelledby="head-bar">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link" tabindex="1">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html" class="nav__link" tabindex="2">Projects</a>
+                    </li>
+                    <li>
+                        <a href="fun_facts.html" class="nav__link" tabindex="3">Fun Facts About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home" id="home">
+            <nav aria-labelledby="intro-social">
+                <div class="home__container container grid">
+                    <img src="data/profile_pic.jpeg" alt="Roman Svintitskyy's Portrait" class="home__img">
+                    <div class="home__data">
+                        <h1 class="home__name">Roman Svintitskyy</h1>
+                        <p class="home__intro">Aspiring Full-Stack Software Engineer, Data Enthusiast</p>
+                        <dl class="home__list">
+                            <dt>PHONE:</dt>
+                            <dd>872.810.5612</dd>
+                            <dt>EMAIL:</dt>
+                            <dd>romansvintitskyy2023@u.northwestern.edu</dd>
+                            <dt>CURRENTLY BASED IN:</dt>
+                            <dd>Chicago, IL</dd>
+                        </dl>
+                        <div class="home__socials">
+                            <a href="https://github.com/romansvintitskyy" target="_blank" class="home__social-link"
+                                tabindex="4"><i class="ri-github-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/svintitskyy/" target="_blank" class="home__social-link"
+                                tabindex="5"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://svintitskyy-a1.glitch.me/" target="_blank" class="home__social-link"
+                                tabindex="6"><i class="ri-folder-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- Hello -->
+        <section class="hello section container">
+            <nav aria-labelledby="short-intro">
+                <h2 class="section__title">Hello!</h2>
+                <p class="hello__details text-lg">
+                    I am a 4th year student pursuing a BS/MS degree in Computer Science at Northwestern University. I am
+                    looking for venues
+                    to unfold my potential and expand my skillset. My quirk lies in offering a strong and even-handed
+                    balance between hard
+                    analytical and soft leadership skills. I keep an open mind towards everything: knowledge,
+                    experience,
+                    and life. I am
+                    looking for avenues to make this world a better place using my skillset.
+                </p>
+                <a href="data/RomanSvintitskyy_Resume_Upd.pdf" class="button button--flex text-sm" tabindex="7">
+                    <i class="ri-download-2-line"> DOWNLOAD CV </i>
+                </a>
+            </nav>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects section container" id="projects">
+            <nav aria-labelledby="projects">
+                <h2 class="section__title">Sample Projects</h2>
+                <div class="projects__container grid">
+                    <div class="projects__item">
+                        <div class="photo__box">
+                            <img src="data/svintitskyy-a8.gif" alt="A gif depicting the visual masks project"
+                                class="projects__icon" onclick="show_text('mask_desc')" tabindex="8" />
+                            <h3 class="projects__title text-lg">Masks with Facial Recognition</h3>
+                            <p class="projects__detail" id="mask_desc">Funky interactive masks that follow your face
+                                movements. This project is built using p5.js, HTML/CSS/Javascript, and Vue.js.</p>
+                        </div>
+                    </div>
+                    <div class="projects__item">
+                        <div class="photo__box">
+                            <img src="data/quotepop.png" alt="A gif depicting the visual masks project"
+                                class="projects__icon" id="quotepop" onclick="show_text('quotepop_desc')"
+                                tabindex="9" />
+                            <h3 class="projects__title text-lg" id="quotepop_title">QuotePop</h3>
+                            <p class="projects__detail" id="quotepop_desc">QuotePop listens to what you say and finds
+                                the
+                                perfect quote for you. This project is built using Python, Flask, HTML/CSS/JavaScript,
+                                and
+                                React. Youtube demo coming.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- Projects new format: later -->
+
+        <!--Contact Me  -->
+        <section class="contact section" id="contact">
+            <nav aria-labelledby="contact-methods">
+                <div class="contact__content container">
+                    <h2 class="section__title"> Let's connect via:</h2>
+                    <div class="contact__container grid">
+                        <div class="contact__info">
+                            <dl class="contact__list">
+                                <dt>PHONE: </dt>
+                                <dd>872-810-5612</dd>
+                                <dt>EMAIL: </dt>
+                                <dd>svintitskyy@u.northwestern.edu</dd>
+                            </dl>
+
+                            <ul class="contact__socials">
+                                <li>
+                                    <a href="https://www.linkedin.com/in/svintitskyy/" class="contact__social-link"
+                                        tabindex="10">LinkedIn</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/romansvintitskyy" class="contact__social-link"
+                                        tabindex="11">Github</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contact__form">
+                            <p class="contact__form-title">Or drop me a line here! </p>
+                            <form action="" id="contact-form">
+                                <div class="contact__input-div">
+                                    <input type="text" name="name" placeholder="Your name" class="contact__input"
+                                        id="contact-name" tabindex="12">
+                                </div>
+                                <div class="contact__input-div">
+                                    <input type="email" name="email" placeholder="Your email" class="contact__input"
+                                        id="contact-email" tabindex="13">
+                                </div>
+                                <div class="contact__input-div">
+                                    <input type="text" name="number" placeholder="Your number (optional)" class="contact__input"
+                                        id="contact-number" tabindex="14">
+                                </div>
+                                <div class="contact__input-div">
+                                    <input type="text" name="text" placeholder="Your organization (optional)" class="contact__input"
+                                        id="contact-organization" tabindex="15">
+                                </div>
+                                <div class="contact__input-div">
+                                    <textarea placeholder="Type your message here" name="message"
+                                        class="contact__input textarea" id="message" cols="30" rows="5"
+                                        tabindex="16"></textarea>
+                                </div>
+                                <div class="contact__input-div">
+                                    <label style="word-wrap:break-word">
+                                        <input id="consent-check" type="checkbox" value="yes" tabindex="17" /> I agree
+                                        with my data being
+                                        stored and processed.
+                                    </label>
+                                </div>
+                                <button type="submit" class="button contact__button" tabindex="18">SEND</button>
+                                <p class="contact__message text-sm" id="contact-message">Status Message</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </main>
+
+    <!-- JS Functionality -->
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Click-on Functions -->
+    <script src="js/functionality.js"></script>
+    <!-- Contact Form - Sending Emails -->
+    <script src="js/contact_me.js"></script>
+
+
+</body>
+
+</html>

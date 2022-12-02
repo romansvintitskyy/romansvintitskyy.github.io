@@ -1,0 +1,447 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400;1,900&display=swap');
+
+
+/* Global variables */
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-height: 3.5rem;
+    --text-color: #555;
+    --bg-color:#fff;
+    --border-color: #f1f1f1;
+
+    /* Font  */
+    --font: 'Montserrat', sans-serif;
+    --fs-h1: 2.75rem;
+    --fs-h2: 2.25rem;
+    --fs-lg: 1.25rem;
+    --fs-base: 1rem;
+    --fs-sm: 0.875rem;
+    --medium:500;
+    --semibold: 600;
+    --bold: 700;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body, button, input, textarea{
+    font-family: var(--font);
+    font-size: var(--fs-base);
+    
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5em;
+}
+
+h1, h2, h3{
+    font-family: var(--font);
+    font-weight: var(--bold);
+}
+
+ul{
+    list-style: none;
+}
+ 
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+img{
+    max-width: 100;
+    height: auto;
+}
+
+textarea, input{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+
+/* Home: Intro, Contact Info */
+.home{
+    background-color: #98888D;
+    background-size: cover;
+    background-position: 50%;
+    padding-top: 5.5rem;
+    position: relative;
+    margin-bottom: 4.5rem;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+} 
+
+.grid{
+    display: grid;
+}
+
+.section{
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+.section__title{
+    font-size: var(--fs-h2);
+    line-height: 1.17em;
+    font-weight: var(--medium);
+    margin-bottom: 1.12em;
+}
+
+.text-lg{
+    font-size: var(--fs-lg);
+    line-height: 1.67em;
+}
+
+.text-sm{
+    font-size: var(--fs-sm);
+    line-height: 1.43em;
+}
+
+.home__container{
+    grid-template-columns: 4fr 8fr;
+    column-gap: 1.875rem;
+}
+
+.home__img,
+.home__data{
+    z-index: 10
+}
+
+.home__img{
+    width: 100%;
+    height: 100;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    transform: translateY(3.125rem);
+    box-shadow: 0 0 27px rgb(64, 26, 67, 50%);
+}
+
+.home__name,
+.home__intro,
+.home__list,
+.home__social-link{
+    color: #fff;
+    font-family:  var(--font);
+}
+
+.home__name{
+    font-size: var(--fs-h1);
+    line-height: 1.14em;
+    margin: 0.9em 0 0.23em;
+}
+
+.home__intro{
+    margin-bottom: 2.5em;
+}
+
+.home__list dt{
+    float: left;
+    font-weight: var(--bold);
+}
+
+.home__list dd {
+    padding-left: 15em;
+}
+
+.home__list dd:not(:last-child){
+    margin-bottom: 0.94em;
+}
+
+.home__socials{
+    margin: 1.25rem 0 2.2rem;
+}
+
+.home__social-link{
+    font-size: 1.7rem;
+    line-height: 1.36em;
+    margin-right: 0.25rem;
+}
+
+.home__social-link:hover{
+    color: #401A1B;
+}
+
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #98888D;
+    padding-bottom: 2rem;
+    
+}
+
+.nav{
+    /* background-color: red; */
+    height: calc(var(--header-height)+0.875rem);
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav__list{
+    display: flex;
+    column-gap: 5.25rem;
+    padding-top: 2.25rem;
+}
+
+.nav__link{
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+    font-family: var(--font);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav__link:hover{
+    color:#401A1B;
+}
+
+.nav__close,
+.nav__toggle{
+    display: none;
+}
+
+
+/* Hello: Intro + CV */
+.hello__details{
+    margin-bottom: 1.67em;
+    text-align: justify;
+}
+
+.button{
+    display: inline;
+    background-color: #553532;
+    color: #fff;
+    padding: 1.1em 2.1em;
+    border-radius: 1.56rem;
+    font-weight: var(--semibold);
+}
+
+.button:hover{
+    background-color: #401A1B;
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: flex-start;
+    column-gap: 0.3rem;
+}
+
+/* Sample Projects */
+.projects__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.projects__item{
+    border: 0px  var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: center;
+}
+
+.photo__box{
+    border: 1px solid var(--bg-color);
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+    margin: 0 auto;
+}
+
+.photo__box:hover img{
+    border: 4px solid #401A1B;
+}
+
+.photo__box img{
+    width: 100%;
+    height: 100%;
+} 
+
+#quotepop,
+#quotepop_title,
+#quotepop_desc{
+    transform: translateY(2.7rem);
+}
+
+#quotepop_desc,
+#mask_desc{
+    display: none;
+}
+
+.projects__title{
+    margin-bottom: 0.8em;
+}
+
+
+/* Connect: Contact Form + Socials */
+.contact{ 
+    background-color: #98888D;
+    color: #fff;
+    /* position: relative; */
+    /* background-size: cover; */
+    /* background-position: 50%; */
+     /* background-image: url(data/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg); */
+}
+
+.contact__content{
+    z-index: 10;
+    position: relative;
+}
+
+.contact__container{
+    grid-template-columns: 4fr 5fr 3fr;
+    column-gap: 1.875rem;
+    padding-top: 1.25rem;
+    
+}
+
+.contact .section__title,
+.contact__list,
+.contact__social-link,
+::placeholder,
+.contact__input,
+.contact__form-title,
+.footer__copy{
+    font-family: var(--font);
+    color: #fff;
+}
+
+.contact__list{
+    margin-bottom: 3.25rem;
+}
+
+.contact__list dt{
+    float:  left;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    
+}
+
+.contact__list dd{
+    padding-left: 6.25em;
+    margin-bottom: 2 rem;
+
+}
+
+.contact__socials  li{
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+
+.contact__form{
+    position: relative;
+    
+}
+
+.contact__form-title{
+    margin-bottom: 1.25em;
+}
+
+.contact__input-div{
+    margin-bottom: 0.94em ;
+}
+ 
+.contact__input{
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 0.625rem;
+}
+
+[type="checkbox"]
+{
+    vertical-align:middle;
+}
+
+.textarea {
+    height: 7.2rem;
+    resize: vertical;
+}
+
+.contact__input:focus{
+    box-shadow: inset 0 0 5px 0 #fff;
+}
+
+.contact__button{
+    width: 100%;
+    background-color: #553532;
+}
+
+.contact__message{
+    position: relative;
+    bottom: 33%;
+    left: 0;
+    opacity: 0.4;
+}
+
+.color-light,
+.color-dark{
+    color: black;
+}
+
+/* Adjusting Text */
+#header_proj{
+    background-color: #98888D;
+    padding-bottom: 2rem;
+}
+
+#hello_section_container_proj{
+    padding-top: 10em;
+}
+
+/* Adjusting + styling Iframes */
+#CPDP{
+    width: 100%;
+    height: 850px;
+    border: 0;
+}
+
+#shootings_chi{
+    height: 500px; 
+    width: 100%;
+}
+
+#shootings_chi_iframe{
+    height: 100%; 
+    width: 100%; 
+    border: 0;
+}
+
+#duino-map{
+    height:500px;
+    width:500px;
+    transform: translateX(19em) translateY(2em);
+}
+
+/* Photos container for Fun Facts About Me Section */
+.photos__container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+}
